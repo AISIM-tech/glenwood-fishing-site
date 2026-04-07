@@ -1,0 +1,27 @@
+{
+    "id":  "09070500",
+    "label":  "Colorado near Dotsero webcam",
+    "stationId":  "09070500",
+    "stationName":  "Colorado River near Dotsero",
+    "status":  "live_timelapse",
+    "fetchedAt":  "2026-04-07T17:41:08.8089041Z",
+    "cameraPageUrl":  "https://apps.usgs.gov/hivis/camera/CO_Colorado_River_near_Dotsero",
+    "usgsPageUrl":  "https://www.usgs.gov/mission-areas/water-resources/multimedia/webcams",
+    "source":  {
+                   "provider":  "USGS HIVIS",
+                   "metadataUrl":  "https://jj5utwupk5.execute-api.us-east-1.amazonaws.com/prod/cameras?camId=CO_Colorado_River_near_Dotsero",
+                   "cameraId":  "CO_Colorado_River_near_Dotsero",
+                   "latestImageAt":  "2026-04-07T17:30:04.000Z",
+                   "timelapseGeneratedAt":  "2026-04-07T16:36:02.389Z",
+                   "timelapseLastImageUsedAt":  "2026-04-07T16:30:03.000Z",
+                   "ingestMinutes":  15,
+                   "ingestPeriod":  "daylight"
+               },
+    "assets":  {
+                   "poster":  "./latest.jpg",
+                   "latestStill":  "./latest.jpg",
+                   "timelapse":  "./latest.mp4",
+                   "remotePoster":  "https://usgs-nims-images.s3.amazonaws.com/thumbnail/CO_Colorado_River_near_Dotsero/CO_Colorado_River_near_Dotsero_newest.jpg",
+                   "remoteTimelapse":  "https://usgs-nims-images.s3.amazonaws.com/timelapse/CO_Colorado_River_near_Dotsero/CO_Colorado_River_near_Dotsero_720.mp4"
+               }
+}

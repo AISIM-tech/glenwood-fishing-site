@@ -1,0 +1,30 @@
+{
+    "camId":  "CO_Colorado_River_near_Dotsero",
+    "nwisId":  "09070500",
+    "camName":  "Colorado River near Dotsero",
+    "camDesc":  "USGS HIVIS camera for situational awareness.",
+    "lat":  "39.6446111111111",
+    "lng":  "-107.078013888889",
+    "stateAbrv":  "CO",
+    "tz":  "US/Mountain",
+    "defaultPCode":  "00065",
+    "createdDate":  "2026-03-24T21:08:20.778Z",
+    "modifiedDate":  "2026-04-01T19:38:52.619Z",
+    "newestImageDT":  "2026-04-07T17:30:04.000Z",
+    "TL_enabled":  true,
+    "TL_lastGeneratedDT":  "2026-04-07T16:36:02.389Z",
+    "TL_lastImageUsedDT":  "2026-04-07T16:30:03.000Z",
+    "hideCam":  false,
+    "overlayDir":  "https://usgs-nims-images.s3.amazonaws.com/overlay/CO_Colorado_River_near_Dotsero/",
+    "thumbDir":  "https://usgs-nims-images.s3.amazonaws.com/thumbnail/CO_Colorado_River_near_Dotsero/",
+    "smallDir":  "https://usgs-nims-images.s3.amazonaws.com/720/CO_Colorado_River_near_Dotsero/",
+    "tlDir":  "https://usgs-nims-images.s3.amazonaws.com/timelapse/CO_Colorado_River_near_Dotsero/",
+    "ingest":  {
+                   "period":  "daylight",
+                   "intr":  15,
+                   "specificArr":  [
+
+                                   ]
+               },
+    "locus":  "aws"
+}

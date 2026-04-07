@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Glenwood Fishing Conditions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <main>
+      <section class="map-prototype">
+        <div class="map-panel">
+          <div class="map-panel__header">
+            <div>
+              <p class="panel-label">Glenwood Springs Fly Map</p>
+              <h1>Tap a point. Read the water.</h1>
+            </div>
+          </div>
+
+          <section class="weather-strip" id="weather-card">
+            <div class="weather-strip__intro">
+              <p class="panel-label">General Weather</p>
+              <h4 id="weather-title">Today around the valley</h4>
+            </div>
+            <div class="weather-strip__metrics" id="weather-metrics"></div>
+          </section>
+
+          <section class="moon-strip" id="moon-card">
+            <div class="moon-strip__content" id="weather-moon">Moon</div>
+            <div class="moon-strip__summary" id="weather-summary">Moon context will show here.</div>
+          </section>
+
+          <section class="camera-strip" id="camera-card">
+            <div class="camera-strip__copy">
+              <p class="panel-label">River Camera</p>
+              <h4 id="camera-title">Colorado above the Roaring Fork</h4>
+              <p class="camera-strip__lede" id="camera-summary">Buffered USGS timelapse will show here.</p>
+              <div class="camera-strip__meta" id="camera-meta"></div>
+            </div>
+            <div class="camera-strip__media" id="camera-media"></div>
+          </section>
+
+          <div class="map-layout">
+            <div class="map-canvas" id="map-canvas" aria-label="Prototype fishing access map"></div>
+
+            <aside class="map-detail" id="map-detail">
+              <p class="panel-label">Selected Access</p>
+              <h3 id="map-detail-name">Choose a point</h3>
+              <p class="map-detail__sub" id="map-detail-river">Tap a marker to inspect local conditions.</p>
+
+              <div class="map-detail__score">
+                <span>Fishability score</span>
+                <div class="meter-track">
+                  <div class="meter-fill" id="map-detail-meter"></div>
+                </div>
+                <strong id="map-detail-score">0 / 100</strong>
+              </div>
+
+              <div class="map-detail__metrics" id="map-detail-metrics"></div>
+              <div class="map-detail__chips" id="map-detail-chips"></div>
+              <div id="map-detail-summary"></div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+  <script src="app.js"></script>
+</body>
+</html>

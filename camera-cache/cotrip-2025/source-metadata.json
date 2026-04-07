@@ -1,0 +1,28 @@
+{
+    "id":  2025,
+    "public":  true,
+    "name":  "I-70 MP 123.15 EB : 2.2 miles E of Grizzly Creek",
+    "lastUpdated":  1775497345713,
+    "location":  {
+                     "fips":  8,
+                     "latitude":  39.57357,
+                     "longitude":  -107.223701,
+                     "routeId":  "I-70",
+                     "linearReference":  123.14048499534528,
+                     "localRoad":  false,
+                     "cityReference":  "3 miles east of the No Name area"
+                 },
+    "cameraOwner":  {
+                        "name":  "Colorado DOT"
+                    },
+    "views":  [
+                  {
+                      "name":  "I-70 MP 123.15 EB : 2.2 miles E of Grizzly Creek",
+                      "type":  "WMP",
+                      "url":  "https://publicstreamer2.cotrip.org:443/rtplive/070E12315CAM1MED/playlist.m3u8",
+                      "videoPreviewUrl":  "https://cocam.carsprogram.org/Snapshots/070E12315CAM1MED.flv.png",
+                      "imageTimestamp":  1775497328000
+                  }
+              ],
+    "active":  true
+}

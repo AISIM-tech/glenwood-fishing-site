@@ -1,0 +1,4 @@
+id,name,river,section,lat,lng,reachId,primaryGaugeId,displayStatus,accessType,suitability,note
+glenwood-town-reach,Glenwood Town Reach,Colorado River,Two Rivers to New Castle,39.548900,-107.334200,co_glenwood_01,glenwood-colorado-usgs,planned,Trail and park access,Good general town reach placeholder,Estimated fishing location tied to the Glenwood Colorado gauge.
+south-canyon-wave,South Canyon Wave,Colorado River,South Canyon Wade Water,39.562500,-107.410400,co_south_canyon_01,south-canyon-below-usgs,planned,Bridge and bank access,Good for a downstream Glenwood/South Canyon reference,Estimated fishing location tied to the South Canyon gauge corridor.
+lower-roaring-fork-town,Lower Roaring Fork Town Reach,Roaring Fork River,Glenwood Canyon Mouth,39.545800,-107.331000,rf_glenwood_01,glenwood-usgs,planned,Bridge and trail access,Good lower Roaring Fork reference spot,Estimated fishing location tied to the Glenwood Roaring Fork gauge.

@@ -1,0 +1,27 @@
+{
+    "id":  "09071750",
+    "label":  "Colorado above Glenwood Springs webcam",
+    "stationId":  "09071750",
+    "stationName":  "Colorado River above Glenwood Springs",
+    "status":  "live_timelapse",
+    "fetchedAt":  "2026-04-07T17:41:07.6472012Z",
+    "cameraPageUrl":  "https://apps.usgs.gov/hivis/camera/CO_Colorado_River_above_Glenwood_Springs",
+    "usgsPageUrl":  "https://www.usgs.gov/mission-areas/water-resources/multimedia/webcams",
+    "source":  {
+                   "provider":  "USGS HIVIS",
+                   "metadataUrl":  "https://jj5utwupk5.execute-api.us-east-1.amazonaws.com/prod/cameras?camId=CO_Colorado_River_above_Glenwood_Springs",
+                   "cameraId":  "CO_Colorado_River_above_Glenwood_Springs",
+                   "latestImageAt":  "2026-04-07T17:30:02.000Z",
+                   "timelapseGeneratedAt":  "2026-04-07T16:51:50.861Z",
+                   "timelapseLastImageUsedAt":  "2026-04-07T16:45:02.000Z",
+                   "ingestMinutes":  15,
+                   "ingestPeriod":  "daylight"
+               },
+    "assets":  {
+                   "poster":  "./latest.jpg",
+                   "latestStill":  "./latest.jpg",
+                   "timelapse":  "./latest.mp4",
+                   "remotePoster":  "https://usgs-nims-images.s3.amazonaws.com/thumbnail/CO_Colorado_River_above_Glenwood_Springs/CO_Colorado_River_above_Glenwood_Springs_newest.jpg",
+                   "remoteTimelapse":  "https://usgs-nims-images.s3.amazonaws.com/timelapse/CO_Colorado_River_above_Glenwood_Springs/CO_Colorado_River_above_Glenwood_Springs_720.mp4"
+               }
+}

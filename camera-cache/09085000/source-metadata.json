@@ -1,0 +1,30 @@
+{
+    "camId":  "CO_Roaring_Fork_River_at_Glenwood_Springs",
+    "nwisId":  "09085000",
+    "camName":  "Roaring Fork River at Glenwood Springs",
+    "camDesc":  "Camera install for LSPIV",
+    "lat":  "39.54666667",
+    "lng":  "-107.3308333",
+    "stateAbrv":  "CO",
+    "tz":  "US/Mountain",
+    "defaultPCode":  "00065",
+    "createdDate":  "2025-03-24T21:53:58.833Z",
+    "modifiedDate":  "2025-03-24T21:53:58.833Z",
+    "newestImageDT":  "2026-04-07T17:30:09.000Z",
+    "TL_enabled":  true,
+    "TL_lastGeneratedDT":  "2026-04-07T16:36:28.135Z",
+    "TL_lastImageUsedDT":  "2026-04-07T16:30:11.000Z",
+    "hideCam":  false,
+    "overlayDir":  "https://usgs-nims-images.s3.amazonaws.com/overlay/CO_Roaring_Fork_River_at_Glenwood_Springs/",
+    "thumbDir":  "https://usgs-nims-images.s3.amazonaws.com/thumbnail/CO_Roaring_Fork_River_at_Glenwood_Springs/",
+    "smallDir":  "https://usgs-nims-images.s3.amazonaws.com/720/CO_Roaring_Fork_River_at_Glenwood_Springs/",
+    "tlDir":  "https://usgs-nims-images.s3.amazonaws.com/timelapse/CO_Roaring_Fork_River_at_Glenwood_Springs/",
+    "ingest":  {
+                   "period":  "daylight",
+                   "intr":  15,
+                   "specificArr":  [
+
+                                   ]
+               },
+    "locus":  "aws"
+}

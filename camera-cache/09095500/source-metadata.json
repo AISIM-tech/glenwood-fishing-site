@@ -1,0 +1,29 @@
+{
+    "camId":  "CO_Colorado_River_near_Cameo",
+    "nwisId":  "09095500",
+    "camName":  "Colorado River near Cameo",
+    "camDesc":  "Colorado River near Cameo, CO",
+    "lat":  "39.2391463",
+    "lng":  "-108.2661946",
+    "stateAbrv":  "CO",
+    "tz":  "US/Mountain",
+    "createdDate":  "2024-06-25T14:51:22.690Z",
+    "modifiedDate":  "2024-06-25T14:51:22.690Z",
+    "newestImageDT":  "2026-04-07T17:30:05.000Z",
+    "TL_enabled":  true,
+    "TL_lastGeneratedDT":  "2026-04-07T16:40:52.624Z",
+    "TL_lastImageUsedDT":  "2026-04-07T16:30:03.000Z",
+    "hideCam":  false,
+    "overlayDir":  "https://usgs-nims-images.s3.amazonaws.com/overlay/CO_Colorado_River_near_Cameo/",
+    "thumbDir":  "https://usgs-nims-images.s3.amazonaws.com/thumbnail/CO_Colorado_River_near_Cameo/",
+    "smallDir":  "https://usgs-nims-images.s3.amazonaws.com/720/CO_Colorado_River_near_Cameo/",
+    "tlDir":  "https://usgs-nims-images.s3.amazonaws.com/timelapse/CO_Colorado_River_near_Cameo/",
+    "ingest":  {
+                   "period":  "daylight",
+                   "intr":  15,
+                   "specificArr":  [
+
+                                   ]
+               },
+    "locus":  "aws"
+}

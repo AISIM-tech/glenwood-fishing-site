@@ -1,0 +1,31 @@
+{
+    "camId":  "CO_Colorado_River_above_Roaring_Fork_River_at_Glenwood_Springs",
+    "nwisId":  "393259107194801",
+    "camName":  "Colorado River above Roaring Fork River at Glenwood Springs",
+    "camDesc":  "Colorado River above Roaring Fork River at Glenwood Springs, CO",
+    "lat":  "39.54975",
+    "lng":  "-107.3301",
+    "stateAbrv":  "CO",
+    "tz":  "US/Mountain",
+    "createdDate":  "2023-05-17T21:21:53.080Z",
+    "modifiedDate":  "2023-05-17T21:21:53.080Z",
+    "newestImageDT":  "2026-04-07T17:30:06.000Z",
+    "TL_enabled":  true,
+    "TL_lastGeneratedDT":  "2026-04-07T16:37:01.752Z",
+    "TL_lastImageUsedDT":  "2026-04-07T16:30:24.000Z",
+    "hideCam":  false,
+    "overlayDir":  "https://usgs-nims-images.s3.amazonaws.com/overlay/CO_Colorado_River_above_Roaring_Fork_River_at_Glenwood_Springs/",
+    "thumbDir":  "https://usgs-nims-images.s3.amazonaws.com/thumbnail/CO_Colorado_River_above_Roaring_Fork_River_at_Glenwood_Springs/",
+    "smallDir":  "https://usgs-nims-images.s3.amazonaws.com/720/CO_Colorado_River_above_Roaring_Fork_River_at_Glenwood_Springs/",
+    "tlDir":  "https://usgs-nims-images.s3.amazonaws.com/timelapse/CO_Colorado_River_above_Roaring_Fork_River_at_Glenwood_Springs/",
+    "ingest":  {
+                   "period":  "daylight",
+                   "intr":  15,
+                   "specificArr":  [
+
+                                   ],
+                   "daylightStartOffset":  "",
+                   "daylightEndOffset":  ""
+               },
+    "locus":  "aws"
+}

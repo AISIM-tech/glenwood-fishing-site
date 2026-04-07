@@ -1,0 +1,27 @@
+{
+    "id":  "09095500",
+    "label":  "Colorado River near Cameo webcam",
+    "stationId":  "09095500",
+    "stationName":  "Colorado River near Cameo",
+    "status":  "live_timelapse",
+    "fetchedAt":  "2026-04-07T17:41:11.8704451Z",
+    "cameraPageUrl":  "https://apps.usgs.gov/hivis/camera/CO_Colorado_River_near_Cameo",
+    "usgsPageUrl":  "https://www.usgs.gov/media/webcams/colorado-river-near-cameo-co-09095500",
+    "source":  {
+                   "provider":  "USGS HIVIS",
+                   "metadataUrl":  "https://jj5utwupk5.execute-api.us-east-1.amazonaws.com/prod/cameras?camId=CO_Colorado_River_near_Cameo",
+                   "cameraId":  "CO_Colorado_River_near_Cameo",
+                   "latestImageAt":  "2026-04-07T17:30:05.000Z",
+                   "timelapseGeneratedAt":  "2026-04-07T16:40:52.624Z",
+                   "timelapseLastImageUsedAt":  "2026-04-07T16:30:03.000Z",
+                   "ingestMinutes":  15,
+                   "ingestPeriod":  "daylight"
+               },
+    "assets":  {
+                   "poster":  "./latest.jpg",
+                   "latestStill":  "./latest.jpg",
+                   "timelapse":  "./latest.mp4",
+                   "remotePoster":  "https://usgs-nims-images.s3.amazonaws.com/thumbnail/CO_Colorado_River_near_Cameo/CO_Colorado_River_near_Cameo_newest.jpg",
+                   "remoteTimelapse":  "https://usgs-nims-images.s3.amazonaws.com/timelapse/CO_Colorado_River_near_Cameo/CO_Colorado_River_near_Cameo_720.mp4"
+               }
+}

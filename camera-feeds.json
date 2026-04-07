@@ -1,0 +1,80 @@
+[
+  {
+    "id": "393259107194801",
+    "sourceType": "usgs",
+    "label": "Colorado above Roaring Fork webcam",
+    "camId": "CO_Colorado_River_above_Roaring_Fork_River_at_Glenwood_Springs",
+    "stationId": "393259107194801",
+    "stationName": "Colorado River above Roaring Fork River at Glenwood Springs",
+    "metadataUrl": "https://jj5utwupk5.execute-api.us-east-1.amazonaws.com/prod/cameras?camId=CO_Colorado_River_above_Roaring_Fork_River_at_Glenwood_Springs",
+    "cameraPageUrl": "https://apps.usgs.gov/hivis/camera/CO_Colorado_River_above_Roaring_Fork_River_at_Glenwood_Springs",
+    "usgsPageUrl": "https://www.usgs.gov/media/webcams/colorado-river-above-roaring-fork-river-glenwood-springs-co-393259107194801",
+    "outputSlug": "393259107194801",
+    "timelapseVariant": "720"
+  },
+  {
+    "id": "09071750",
+    "sourceType": "usgs",
+    "label": "Colorado above Glenwood Springs webcam",
+    "camId": "CO_Colorado_River_above_Glenwood_Springs",
+    "stationId": "09071750",
+    "stationName": "Colorado River above Glenwood Springs",
+    "metadataUrl": "https://jj5utwupk5.execute-api.us-east-1.amazonaws.com/prod/cameras?camId=CO_Colorado_River_above_Glenwood_Springs",
+    "cameraPageUrl": "https://apps.usgs.gov/hivis/camera/CO_Colorado_River_above_Glenwood_Springs",
+    "usgsPageUrl": "https://www.usgs.gov/mission-areas/water-resources/multimedia/webcams",
+    "outputSlug": "09071750",
+    "timelapseVariant": "720"
+  },
+  {
+    "id": "09070500",
+    "sourceType": "usgs",
+    "label": "Colorado near Dotsero webcam",
+    "camId": "CO_Colorado_River_near_Dotsero",
+    "stationId": "09070500",
+    "stationName": "Colorado River near Dotsero",
+    "metadataUrl": "https://jj5utwupk5.execute-api.us-east-1.amazonaws.com/prod/cameras?camId=CO_Colorado_River_near_Dotsero",
+    "cameraPageUrl": "https://apps.usgs.gov/hivis/camera/CO_Colorado_River_near_Dotsero",
+    "usgsPageUrl": "https://www.usgs.gov/mission-areas/water-resources/multimedia/webcams",
+    "outputSlug": "09070500",
+    "timelapseVariant": "720"
+  },
+  {
+    "id": "09085000",
+    "sourceType": "usgs",
+    "label": "Roaring Fork at Glenwood Springs webcam",
+    "camId": "CO_Roaring_Fork_River_at_Glenwood_Springs",
+    "stationId": "09085000",
+    "stationName": "Roaring Fork River at Glenwood Springs",
+    "metadataUrl": "https://jj5utwupk5.execute-api.us-east-1.amazonaws.com/prod/cameras?camId=CO_Roaring_Fork_River_at_Glenwood_Springs",
+    "cameraPageUrl": "https://apps.usgs.gov/hivis/camera/CO_Roaring_Fork_River_at_Glenwood_Springs",
+    "usgsPageUrl": "https://www.usgs.gov/media/webcams/roaring-fork-river-glenwood-springs-co-09085000",
+    "outputSlug": "09085000",
+    "timelapseVariant": "720"
+  },
+  {
+    "id": "09095500",
+    "sourceType": "usgs",
+    "label": "Colorado River near Cameo webcam",
+    "camId": "CO_Colorado_River_near_Cameo",
+    "stationId": "09095500",
+    "stationName": "Colorado River near Cameo",
+    "metadataUrl": "https://jj5utwupk5.execute-api.us-east-1.amazonaws.com/prod/cameras?camId=CO_Colorado_River_near_Cameo",
+    "cameraPageUrl": "https://apps.usgs.gov/hivis/camera/CO_Colorado_River_near_Cameo",
+    "usgsPageUrl": "https://www.usgs.gov/media/webcams/colorado-river-near-cameo-co-09095500",
+    "outputSlug": "09095500",
+    "timelapseVariant": "720"
+  },
+  {
+    "id": "cotrip-2025",
+    "sourceType": "cotrip",
+    "label": "Grizzly Creek CoTrip camera",
+    "stationId": "cotrip-2025",
+    "stationName": "I-70 MP 123.15 EB : 2.2 miles E of Grizzly Creek",
+    "metadataUrl": "https://cotg.carsprogram.org/cameras_v1/api/cameras/2025",
+    "cameraPageUrl": "https://maps.cotrip.org/@-107.28947,39.56945,11?show=normalCameras#camera/2025/1868954387",
+    "usgsPageUrl": null,
+    "outputSlug": "cotrip-2025",
+    "cameraId": "2025",
+    "viewId": "1868954387"
+  }
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "Url":  "https://cotg.carsprogram.org/cameras_v1/api/cameras/2025",
+        "StatusCode":  200,
+        "ContentType":  "application/json",
+        "Preview":  "{\"id\":2025,\"public\":true,\"name\":\"I-70 MP 123.15 EB : 2.2 miles E of Grizzly Creek\",\"lastUpdated\":1775415839558,\"location\":{\"fips\":8,\"latitude\":39.57357,\"longitude\":-107.223701,\"routeId\":\"I-70\",\"linear"
+    },
+    {
+        "Url":  "https://cotg.carsprogram.org/cameras_v1/api/camera/2025",
+        "StatusCode":  500,
+        "ContentType":  "text/html;charset=UTF-8",
+        "Preview":  "The remote server returned an error: (500) Internal Server Error."
+    },
+    {
+        "Url":  "https://cotg.carsprogram.org/cameras_v1/api/views/1868954387",
+        "StatusCode":  500,
+        "ContentType":  "text/html;charset=UTF-8",
+        "Preview":  "The remote server returned an error: (500) Internal Server Error."
+    },
+    {
+        "Url":  "https://cotg.carsprogram.org/cameras_v1/api/cameras/2025/views/1868954387",
+        "StatusCode":  500,
+        "ContentType":  "text/html;charset=UTF-8",
+        "Preview":  "The remote server returned an error: (500) Internal Server Error."
+    },
+    {
+        "Url":  "https://cotg.carsprogram.org/cameras_v1/api/cameraViews/1868954387",
+        "StatusCode":  500,
+        "ContentType":  "text/html;charset=UTF-8",
+        "Preview":  "The remote server returned an error: (500) Internal Server Error."
+    },
+    {
+        "Url":  "https://cotg.carsprogram.org/cameras_v1/api/view/1868954387",
+        "StatusCode":  500,
+        "ContentType":  "text/html;charset=UTF-8",
+        "Preview":  "The remote server returned an error: (500) Internal Server Error."
+    }
+]

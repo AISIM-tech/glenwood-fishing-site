@@ -1,0 +1,27 @@
+{
+    "id":  "393259107194801",
+    "label":  "Colorado above Roaring Fork webcam",
+    "stationId":  "393259107194801",
+    "stationName":  "Colorado River above Roaring Fork River at Glenwood Springs",
+    "status":  "live_timelapse",
+    "fetchedAt":  "2026-04-07T17:41:06.2979605Z",
+    "cameraPageUrl":  "https://apps.usgs.gov/hivis/camera/CO_Colorado_River_above_Roaring_Fork_River_at_Glenwood_Springs",
+    "usgsPageUrl":  "https://www.usgs.gov/media/webcams/colorado-river-above-roaring-fork-river-glenwood-springs-co-393259107194801",
+    "source":  {
+                   "provider":  "USGS HIVIS",
+                   "metadataUrl":  "https://jj5utwupk5.execute-api.us-east-1.amazonaws.com/prod/cameras?camId=CO_Colorado_River_above_Roaring_Fork_River_at_Glenwood_Springs",
+                   "cameraId":  "CO_Colorado_River_above_Roaring_Fork_River_at_Glenwood_Springs",
+                   "latestImageAt":  "2026-04-07T17:30:06.000Z",
+                   "timelapseGeneratedAt":  "2026-04-07T16:37:01.752Z",
+                   "timelapseLastImageUsedAt":  "2026-04-07T16:30:24.000Z",
+                   "ingestMinutes":  15,
+                   "ingestPeriod":  "daylight"
+               },
+    "assets":  {
+                   "poster":  "./latest.jpg",
+                   "latestStill":  "./latest.jpg",
+                   "timelapse":  "./latest.mp4",
+                   "remotePoster":  "https://usgs-nims-images.s3.amazonaws.com/thumbnail/CO_Colorado_River_above_Roaring_Fork_River_at_Glenwood_Springs/CO_Colorado_River_above_Roaring_Fork_River_at_Glenwood_Springs_newest.jpg",
+                   "remoteTimelapse":  "https://usgs-nims-images.s3.amazonaws.com/timelapse/CO_Colorado_River_above_Roaring_Fork_River_at_Glenwood_Springs/CO_Colorado_River_above_Roaring_Fork_River_at_Glenwood_Springs_720.mp4"
+               }
+}

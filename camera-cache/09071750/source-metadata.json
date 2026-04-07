@@ -1,0 +1,29 @@
+{
+    "camId":  "CO_Colorado_River_above_Glenwood_Springs",
+    "nwisId":  "09071750",
+    "camName":  "Colorado River above Glenwood Springs",
+    "camDesc":  "Colorado River above Glenwood Springs, CO",
+    "lat":  "39.5588711",
+    "lng":  "-107.2908874",
+    "stateAbrv":  "CO",
+    "tz":  "US/Mountain",
+    "createdDate":  "2024-06-25T15:56:34.048Z",
+    "modifiedDate":  "2024-06-25T15:56:34.048Z",
+    "newestImageDT":  "2026-04-07T17:30:02.000Z",
+    "TL_enabled":  true,
+    "TL_lastGeneratedDT":  "2026-04-07T16:51:50.861Z",
+    "TL_lastImageUsedDT":  "2026-04-07T16:45:02.000Z",
+    "hideCam":  false,
+    "overlayDir":  "https://usgs-nims-images.s3.amazonaws.com/overlay/CO_Colorado_River_above_Glenwood_Springs/",
+    "thumbDir":  "https://usgs-nims-images.s3.amazonaws.com/thumbnail/CO_Colorado_River_above_Glenwood_Springs/",
+    "smallDir":  "https://usgs-nims-images.s3.amazonaws.com/720/CO_Colorado_River_above_Glenwood_Springs/",
+    "tlDir":  "https://usgs-nims-images.s3.amazonaws.com/timelapse/CO_Colorado_River_above_Glenwood_Springs/",
+    "ingest":  {
+                   "period":  "daylight",
+                   "intr":  15,
+                   "specificArr":  [
+
+                                   ]
+               },
+    "locus":  "aws"
+}
