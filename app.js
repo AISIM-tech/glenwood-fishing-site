@@ -963,12 +963,7 @@ function weatherIconMarkup(type) {
 }
 
 function compactToggleMarkup(text, label = "?") {
-  return `
-    <details class="compact-toggle">
-      <summary aria-label="More information">${label}</summary>
-      <div class="compact-toggle__panel">${text}</div>
-    </details>
-  `;
+  return "";
 }
 
 function moonPhasePath(illumination, trend) {
