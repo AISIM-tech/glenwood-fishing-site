@@ -476,6 +476,32 @@ const specialDataSources = {
   }
 };
 
+const placeholderCameraByPointId = {
+  "redstone-gauge": {
+    provider: "Local placeholder",
+    image: "Images/Crystal_River_at_Redstone,_CO.jpg"
+  },
+  "ruedi-reservoir": {
+    provider: "Wikimedia Commons placeholder",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Ruedi%20Reservoir%2C%20dam%20and%20the%20Fryingpan%20River%20corridor%20near%20Basalt%2C%20Colo..JPG"
+  }
+};
+
+const placeholderCameraByRiver = {
+  "Colorado River": {
+    provider: "Wikimedia Commons placeholder",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Colorado%20river.jpg"
+  },
+  "Roaring Fork River": {
+    provider: "Wikimedia Commons placeholder",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Roaring%20Fork%20River%20in%20Basalt%2C%20Colorado.JPG"
+  },
+  "Fryingpan River": {
+    provider: "Wikimedia Commons placeholder",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Frying%20Pan%20river.jpg"
+  }
+};
+
 function parseCsvRows(text) {
   const rows = [];
   let currentCell = "";
@@ -2660,22 +2686,22 @@ function cameraFallbackForPoint(point) {
     return { ...defaultCameraFeed };
   }
 
-  const isCrystalRedstoneGauge = point.id === "redstone-gauge" || point.usgsSite === "09081600";
+  const placeholder = placeholderCameraByPointId[point.id] ?? placeholderCameraByRiver[point.river] ?? null;
 
   return {
     ...defaultCameraFeed,
-    id: isCrystalRedstoneGauge ? point.id : null,
+    id: placeholder ? point.id : null,
     stationName: point.name,
     label: point.name,
-    status: isCrystalRedstoneGauge ? "image_only" : "no_camera_for_station",
+    status: placeholder ? "image_only" : "no_camera_for_station",
     source: {
       ...defaultCameraFeed.source,
-      provider: isCrystalRedstoneGauge ? "Local placeholder" : defaultCameraFeed.source.provider
+      provider: placeholder?.provider ?? defaultCameraFeed.source.provider
     },
     assets: {
       ...defaultCameraFeed.assets,
-      latestStill: isCrystalRedstoneGauge ? "Images/Crystal_River_at_Redstone,_CO.jpg" : null,
-      poster: isCrystalRedstoneGauge ? "Images/Crystal_River_at_Redstone,_CO.jpg" : null
+      latestStill: placeholder?.image ?? null,
+      poster: placeholder?.image ?? null
     }
   };
 }
