@@ -2572,6 +2572,10 @@ function resolveCameraAssetPath(feedId, assetPath) {
   }
 
   const normalized = assetPath.replace(/^\.\//, "");
+  if (/^(images|camera-cache)\//i.test(normalized)) {
+    return normalized;
+  }
+
   return `camera-cache/${feedId}/${normalized}`;
 }
 
@@ -2656,11 +2660,23 @@ function cameraFallbackForPoint(point) {
     return { ...defaultCameraFeed };
   }
 
+  const isCrystalRedstoneGauge = point.id === "redstone-gauge" || point.usgsSite === "09081600";
+
   return {
     ...defaultCameraFeed,
+    id: isCrystalRedstoneGauge ? point.id : null,
     stationName: point.name,
     label: point.name,
-    status: "no_camera_for_station"
+    status: isCrystalRedstoneGauge ? "image_only" : "no_camera_for_station",
+    source: {
+      ...defaultCameraFeed.source,
+      provider: isCrystalRedstoneGauge ? "Local placeholder" : defaultCameraFeed.source.provider
+    },
+    assets: {
+      ...defaultCameraFeed.assets,
+      latestStill: isCrystalRedstoneGauge ? "Images/Crystal_River_at_Redstone,_CO.jpg" : null,
+      poster: isCrystalRedstoneGauge ? "Images/Crystal_River_at_Redstone,_CO.jpg" : null
+    }
   };
 }
 
@@ -3397,7 +3413,7 @@ function syncMapSelection(points) {
 
   const activePoint = points.find((point) => point.id === activeAccessPointId) ?? null;
   if (activePoint && mapInstance) {
-    mapInstance.flyTo([activePoint.lat, activePoint.lng], Math.max(mapInstance.getZoom(), 11), {
+    mapInstance.flyTo([activePoint.lat, activePoint.lng], Math.max(mapInstance.getZoom(), 12), {
       animate: true,
       duration: 0.75
     });

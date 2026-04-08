@@ -136,14 +136,7 @@ h1 {
 }
 
 .map-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 18px;
-  align-items: start;
-}
-
-.map-panel.has-selection .map-layout {
-  grid-template-columns: minmax(0, 1fr) minmax(420px, 560px);
+  display: block;
 }
 
 .map-stage {
@@ -163,6 +156,20 @@ h1 {
   max-height: 920px;
   overflow: hidden;
   background: #dfe7dd;
+}
+
+.map-stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  background: rgba(22, 31, 43, 0);
+  pointer-events: none;
+  transition: background 180ms ease;
+}
+
+.map-panel.has-selection .map-stage::after {
+  background: rgba(22, 31, 43, 0.12);
 }
 
 .map-stage__prompt {
@@ -293,11 +300,20 @@ h1 {
 
 .map-detail {
   display: none;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 600;
+  width: min(560px, calc(100% - 36px));
   padding: 20px;
   gap: 16px;
   align-content: start;
-  max-height: 76vh;
+  max-height: calc(100% - 36px);
   overflow: auto;
+  border-color: rgba(255, 255, 255, 0.28);
+  background: rgba(250, 252, 250, 0.8);
+  box-shadow: 0 22px 48px rgba(14, 28, 25, 0.2);
+  backdrop-filter: blur(18px);
 }
 
 .map-panel.has-selection .map-detail {
@@ -2204,18 +2220,17 @@ h1 {
 @media (max-width: 980px) {
   .map-panel__header,
   .weather-strip,
-  .camera-strip,
-  .map-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .map-panel.has-selection .map-layout {
+  .camera-strip {
     grid-template-columns: 1fr;
   }
 
   .map-canvas,
   .map-detail {
     max-height: none;
+  }
+
+  .map-detail {
+    width: min(620px, calc(100% - 32px));
   }
 }
 
@@ -2245,7 +2260,14 @@ h1 {
   }
 
   .map-detail {
+    top: auto;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    width: auto;
+    max-height: min(72vh, calc(100% - 20px));
     padding: 16px;
+    border-radius: 22px;
   }
 
   .map-detail__topbar {
