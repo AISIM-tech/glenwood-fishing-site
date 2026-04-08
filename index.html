@@ -61,18 +61,21 @@
                 <div class="map-detail__chips" id="map-detail-chips"></div>
                 <div id="map-detail-summary"></div>
 
-                <section class="weather-strip map-detail__section" id="weather-card">
-                  <div class="weather-strip__intro">
-                    <p class="panel-label">General Weather</p>
-                    <h4 id="weather-title">Today around the valley</h4>
-                  </div>
-                  <div class="weather-strip__metrics" id="weather-metrics"></div>
-                </section>
+                <details class="context-drawer map-detail__section">
+                  <summary>More context</summary>
+                  <section class="weather-strip" id="weather-card">
+                    <div class="weather-strip__intro">
+                      <p class="panel-label">General Weather</p>
+                      <h4 id="weather-title">Today around the valley</h4>
+                    </div>
+                    <div class="weather-strip__metrics" id="weather-metrics"></div>
+                  </section>
 
-                <section class="moon-strip map-detail__section" id="moon-card">
-                  <div class="moon-strip__content" id="weather-moon">Moon</div>
-                  <div class="moon-strip__summary" id="weather-summary">Moon context will show here.</div>
-                </section>
+                  <section class="moon-strip" id="moon-card">
+                    <div class="moon-strip__content" id="weather-moon">Moon</div>
+                    <div class="moon-strip__summary" id="weather-summary">Moon context will show here.</div>
+                  </section>
+                </details>
               </aside>
             </div>
           </div>
