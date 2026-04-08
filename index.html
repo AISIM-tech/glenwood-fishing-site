@@ -23,40 +23,29 @@
           <div class="map-panel__header">
             <div>
               <p class="panel-label">Glenwood Springs Fly Map</p>
-              <h1>Tap a point. Read the water. Fish smarter.</h1>
+              <h1>Tap a point. Read the water.</h1>
             </div>
           </div>
 
-          <section class="weather-strip" id="weather-card">
-            <div class="weather-strip__intro">
-              <p class="panel-label">General Weather</p>
-              <h4 id="weather-title">Today around the valley</h4>
-            </div>
-            <div class="weather-strip__metrics" id="weather-metrics"></div>
-          </section>
-
-          <section class="moon-strip" id="moon-card">
-            <div class="moon-strip__content" id="weather-moon">Moon</div>
-            <div class="moon-strip__summary" id="weather-summary">Moon context will show here.</div>
-          </section>
-
-          <section class="camera-strip" id="camera-card">
-            <div class="camera-strip__copy">
-              <p class="panel-label">River Camera</p>
-              <h4 id="camera-title">Colorado above the Roaring Fork</h4>
-              <p class="camera-strip__lede" id="camera-summary">Buffered USGS timelapse will show here.</p>
-              <div class="camera-strip__meta" id="camera-meta"></div>
-            </div>
-            <div class="camera-strip__media" id="camera-media"></div>
-          </section>
-
           <div class="map-layout">
-            <div class="map-canvas" id="map-canvas" aria-label="Prototype fishing access map"></div>
+            <div class="map-stage">
+              <div class="map-canvas" id="map-canvas" aria-label="Prototype fishing access map"></div>
+              <div class="map-stage__prompt" id="map-prompt">
+                <p class="panel-label">Truth Sources</p>
+                <h2>Tap a point to inspect the live source conditions.</h2>
+                <p>Start with the map. The point panel appears only when you select a marker.</p>
+              </div>
+            </div>
 
             <aside class="map-detail" id="map-detail">
-              <p class="panel-label">Selected Access</p>
-              <h3 id="map-detail-name">Choose a point</h3>
-              <p class="map-detail__sub" id="map-detail-river">Tap a marker to inspect local conditions.</p>
+              <div class="map-detail__topbar">
+                <div>
+                  <p class="panel-label">Selected Truth Source</p>
+                  <h3 id="map-detail-name">Choose a point</h3>
+                  <p class="map-detail__sub" id="map-detail-river">Tap a marker to inspect local conditions.</p>
+                </div>
+                <button class="map-detail__close" id="map-detail-close" type="button" aria-label="Close point details">Close</button>
+              </div>
 
               <div class="map-detail__score">
                 <span>Fishability score</span>
@@ -66,9 +55,26 @@
                 <strong id="map-detail-score">0 / 100</strong>
               </div>
 
+              <section class="camera-strip map-detail__section" id="camera-card">
+                <div class="camera-strip__media" id="camera-media"></div>
+              </section>
+
               <div class="map-detail__metrics" id="map-detail-metrics"></div>
               <div class="map-detail__chips" id="map-detail-chips"></div>
               <div id="map-detail-summary"></div>
+
+              <section class="weather-strip map-detail__section" id="weather-card">
+                <div class="weather-strip__intro">
+                  <p class="panel-label">General Weather</p>
+                  <h4 id="weather-title">Today around the valley</h4>
+                </div>
+                <div class="weather-strip__metrics" id="weather-metrics"></div>
+              </section>
+
+              <section class="moon-strip map-detail__section" id="moon-card">
+                <div class="moon-strip__content" id="weather-moon">Moon</div>
+                <div class="moon-strip__summary" id="weather-summary">Moon context will show here.</div>
+              </section>
             </aside>
           </div>
         </div>

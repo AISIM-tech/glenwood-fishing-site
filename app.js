@@ -421,6 +421,7 @@ const usgsParameterCodes = {
 };
 
 const mapCanvas = document.querySelector("#map-canvas");
+const mapPanel = document.querySelector(".map-panel");
 const mapDetailName = document.querySelector("#map-detail-name");
 const mapDetailRiver = document.querySelector("#map-detail-river");
 const mapDetailMeter = document.querySelector("#map-detail-meter");
@@ -429,13 +430,11 @@ const mapDetailScoreBlock = document.querySelector(".map-detail__score");
 const mapDetailMetrics = document.querySelector("#map-detail-metrics");
 const mapDetailChips = document.querySelector("#map-detail-chips");
 const mapDetailSummary = document.querySelector("#map-detail-summary");
+const mapDetailClose = document.querySelector("#map-detail-close");
 const weatherTitle = document.querySelector("#weather-title");
 const weatherMoon = document.querySelector("#weather-moon");
 const weatherMetrics = document.querySelector("#weather-metrics");
 const weatherSummary = document.querySelector("#weather-summary");
-const cameraTitle = document.querySelector("#camera-title");
-const cameraSummary = document.querySelector("#camera-summary");
-const cameraMeta = document.querySelector("#camera-meta");
 const cameraMedia = document.querySelector("#camera-media");
 
 const defaultCameraFeed = {
@@ -2644,31 +2643,10 @@ function cameraFeedMarkup(feed) {
 }
 
 function renderCameraFeed() {
-  if (!cameraTitle || !cameraSummary || !cameraMeta || !cameraMedia) {
+  if (!cameraMedia) {
     return;
   }
 
-  cameraTitle.textContent = cameraFeed.stationName;
-  const hasVideo = Boolean(cameraFeed.assets?.timelapse);
-  const frameCount = Number(cameraFeed.timeline?.frameCount ?? cameraFeed.assets?.frames?.length ?? 0);
-  const hasFrameSequence = !hasVideo && frameCount > 1;
-  const latestImageLabel = formatCameraDateTime(cameraFeed.source?.latestImageAt);
-  const timelapseLabel = formatCameraDateTime(cameraFeed.source?.timelapseGeneratedAt);
-  const ingestMinutes = cameraFeed.source?.ingestMinutes ?? 15;
-
-  cameraSummary.textContent = cameraFeed.id
-    ? hasVideo
-    ? `Locally buffered ${cameraFeed.source?.provider ?? "camera"} timelapse with a fresh still-image fallback. This camera typically updates every ${ingestMinutes} minutes during ${cameraFeed.source?.ingestPeriod ?? "daylight"}.`
-    : hasFrameSequence
-    ? `Playing a local 24-hour frame-by-frame timelapse built from buffered ${cameraFeed.source?.provider ?? "camera"} snapshots. This source is sampled about every ${ingestMinutes} minutes.`
-    : `Using the latest buffered still image from ${cameraFeed.source?.provider ?? "the linked camera"}. This source typically refreshes every ${ingestMinutes} minutes during ${cameraFeed.source?.ingestPeriod ?? "daylight"}.`
-    : "Pick a linked point to see a locally buffered webcam or snapshot when one is available.";
-
-  cameraMeta.innerHTML = [
-    `<span class="camera-pill">${cameraFeed.id ? hasVideo ? "Live timelapse cached" : hasFrameSequence ? `${frameCount}-frame day timelapse` : "Still image only" : "Waiting for point selection"}</span>`,
-    `<span class="camera-pill">Latest frame ${latestImageLabel}</span>`,
-    `<span class="camera-pill">Timelapse ${timelapseLabel}</span>`
-  ].join("");
   cameraMedia.innerHTML = cameraFeedMarkup(cameraFeed);
   attachCameraSequencePlayer();
 }
@@ -3417,7 +3395,7 @@ function syncMapSelection(points) {
     marker.setIcon(buildMarkerIcon(point, condition?.status ?? "fair", isActive));
   });
 
-  const activePoint = points.find((point) => point.id === activeAccessPointId) ?? points[0];
+  const activePoint = points.find((point) => point.id === activeAccessPointId) ?? null;
   if (activePoint && mapInstance) {
     mapInstance.flyTo([activePoint.lat, activePoint.lng], Math.max(mapInstance.getZoom(), 11), {
       animate: true,
@@ -3451,18 +3429,21 @@ function renderMapPoints(points) {
 }
 
 function renderMapDetail(points) {
-  const selectedPoint = points.find((point) => point.id === activeAccessPointId) ?? points[0];
+  const selectedPoint = points.find((point) => point.id === activeAccessPointId) ?? null;
+  mapPanel?.classList.toggle("has-selection", Boolean(selectedPoint));
 
   if (!selectedPoint) {
-      mapDetailName.textContent = "Choose a point";
-      mapDetailRiver.textContent = "Tap a marker to inspect local conditions.";
-      mapDetailScoreBlock.hidden = false;
-      mapDetailScoreBlock.style.display = "";
-      mapDetailMeter.style.width = "0%";
-      mapDetailScore.textContent = "0 / 100";
+    mapDetailName.textContent = "Choose a point";
+    mapDetailRiver.textContent = "Tap a marker to inspect local conditions.";
+    mapDetailScoreBlock.hidden = false;
+    mapDetailScoreBlock.style.display = "";
+    mapDetailMeter.style.width = "0%";
+    mapDetailScore.textContent = "0 / 100";
+    cameraFeed = { ...defaultCameraFeed };
     mapDetailMetrics.innerHTML = "";
     mapDetailChips.innerHTML = "";
     mapDetailSummary.innerHTML = "";
+    renderCameraFeed();
     return;
   }
 
@@ -3480,14 +3461,9 @@ function renderMapDetail(points) {
   mapDetailScore.textContent = reservoirOnlyPoint ? "Reservoir" : `${fishabilityScore} / 100`;
   mapDetailMetrics.innerHTML = reservoirOnlyPoint
     ? [
-        metricMarkup("Type", selectedPoint.accessType),
-        metricMarkup("Best For", selectedPoint.suitability),
         specialStationMetricMarkup(selectedPoint)
       ].join("")
     : [
-        metricMarkup("Access", selectedPoint.accessType),
-        metricMarkup("Best For", selectedPoint.suitability),
-        specialStationMetricMarkup(selectedPoint),
         flowGraphicMarkup(condition),
         temperatureGraphicMarkup(condition),
         turbidityGraphicMarkup(condition)
@@ -3555,7 +3531,7 @@ async function refreshLiveData() {
     }
   }
 
-  const selectedPoint = accessPoints.find((point) => point.id === activeAccessPointId) ?? accessPoints[0] ?? null;
+  const selectedPoint = accessPoints.find((point) => point.id === activeAccessPointId) ?? null;
   await loadCameraFeedForPoint(selectedPoint);
   renderMapDetail(accessPoints);
   renderCameraFeed();
@@ -3580,5 +3556,10 @@ async function init() {
   await refreshLiveData();
   window.setInterval(refreshLiveData, LIVE_REFRESH_INTERVAL_MS);
 }
+
+mapDetailClose?.addEventListener("click", () => {
+  activeAccessPointId = null;
+  render();
+});
 
 init();
