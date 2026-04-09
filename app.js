@@ -80,6 +80,135 @@ const conditions = [
     summary: "Good midday window if the canyon wind stays down. Wade carefully near faster side channels."
   },
   {
+    river: "Grizzly Creek",
+    section: "Glenwood Canyon Tributary Reach",
+    score: 55,
+    flowCfs: 1.4,
+    flowThresholds: { veryLow: 0.1, low: 0.3, primeLow: 0.8, primeHigh: 2.5, high: 6, veryHigh: 12 },
+    flowBand: "ideal",
+    flowPosition: 32,
+    flowRecentCfs: [0.6, 0.7, 0.8, 0.9, 1.0, 1.0, 1.1, 1.2, 1.3, 1.3, 1.4, 1.4],
+    flowTrendLabel: "rising",
+    flowContext: "Tiny high-country tributary where small absolute changes can still matter as a runoff and canyon-inflow signal.",
+    flowGuidance: "Use this more as watershed context for Glenwood Canyon tributary input than as a standalone fishing read.",
+    tempF: 36,
+    tempNormalF: 35,
+    tempTrend7dF: 0.3,
+    tempTrendLabel: "steady",
+    tempRecentF: [35, 35, 35, 35, 36, 36, 36, 36, 36, 36, 36, 36],
+    tempRecentNormalF: [35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35],
+    tempBand: "cold",
+    tempPosition: 12,
+    tempContext: "No live water temperature is currently available from this gauge.",
+    tempGuidance: "Treat Grizzly Creek temperature as unknown unless we add a direct measurement source.",
+    liveTempUnavailable: true,
+    liveTempSource: "USGS 09071295 • No temperature data",
+    clarity: "Unknown",
+    clarityBand: "clear",
+    clarityPosition: 50,
+    turbidityFnu: 0,
+    turbidityBand: "clear",
+    turbidityPosition: 0,
+    turbidityRecentFnu: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    turbidityTrendLabel: "holding",
+    turbidityContext: "No live turbidity signal is currently available from this gauge.",
+    turbidityGuidance: "Treat Grizzly Creek color as observational only until a direct source exists.",
+    liveTurbidityUnavailable: true,
+    liveTurbiditySource: "USGS 09071295 • No turbidity data",
+    access: "Poor",
+    status: "fair",
+    bestTime: "Context only",
+    techniques: ["watershed intel", "tributary check"],
+    hatches: ["None"],
+    summary: "A small Grizzly Creek truth source above Glenwood Canyon that mainly helps show tributary contribution and runoff timing."
+  },
+  {
+    river: "Roaring Fork River",
+    section: "Aspen Upper Fork",
+    score: 71,
+    flowCfs: 118,
+    flowThresholds: { veryLow: 35, low: 55, primeLow: 85, primeHigh: 180, high: 280, veryHigh: 450 },
+    flowBand: "ideal",
+    flowPosition: 40,
+    flowRecentCfs: [104, 106, 108, 110, 111, 112, 114, 115, 116, 117, 118, 118],
+    flowTrendLabel: "rising",
+    flowContext: "Classic upper-basin Roaring Fork flow with enough current to shape pockets and seams without overwhelming every wade lane.",
+    flowGuidance: "Good for short controlled wades, pocket water, and bank-side structure when you move carefully.",
+    tempF: 38,
+    tempNormalF: 37,
+    tempTrend7dF: 0.4,
+    tempTrendLabel: "steady",
+    tempRecentF: [37, 37, 37, 37, 38, 38, 38, 38, 38, 38, 38, 38],
+    tempRecentNormalF: [37, 37, 37, 37, 37, 37, 37, 37, 37, 37, 37, 37],
+    tempBand: "cold",
+    tempPosition: 16,
+    tempContext: "No live water temperature is currently available from this gauge.",
+    tempGuidance: "Treat upper-Fork temperature at Aspen as unknown until we add a direct source or a justified estimate.",
+    liveTempUnavailable: true,
+    liveTempSource: "USGS 09073400 • No temperature data",
+    clarity: "Unknown",
+    clarityBand: "clear",
+    clarityPosition: 50,
+    clarityContext: "No live turbidity signal is currently available from this gauge.",
+    turbidityFnu: 0,
+    turbidityBand: "clear",
+    turbidityPosition: 0,
+    turbidityRecentFnu: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    turbidityTrendLabel: "holding",
+    turbidityContext: "Treat visual clarity here as unknown until we add a direct signal or supporting camera source.",
+    turbidityGuidance: "Use local observation instead of this card for upper-Fork clarity calls right now.",
+    liveTurbidityUnavailable: true,
+    liveTurbiditySource: "USGS 09073400 • No turbidity data",
+    access: "Good",
+    status: "good",
+    bestTime: "11 AM - 4 PM",
+    techniques: ["nymph", "wade", "dry-dropper"],
+    hatches: ["Midges", "Stoneflies", "Blue-winged olives"],
+    summary: "A useful upper-basin Roaring Fork truth source near Aspen with solid live flow context, but still missing direct temperature and turbidity coverage."
+  },
+  {
+    river: "Roaring Fork River",
+    section: "Maroon Confluence Reach",
+    score: 76,
+    flowCfs: 235,
+    flowThresholds: { veryLow: 70, low: 110, primeLow: 160, primeHigh: 320, high: 520, veryHigh: 850 },
+    flowBand: "ideal",
+    flowPosition: 45,
+    flowRecentCfs: [210, 214, 218, 221, 224, 226, 228, 230, 232, 234, 235, 235],
+    flowTrendLabel: "rising",
+    flowContext: "Below Maroon Creek the upper Roaring Fork starts to feel broader and more structured, with defined seams and stronger bank lanes.",
+    flowGuidance: "Good mixed upper-valley truth water for pocket seams, softer banks, and short controlled wades.",
+    tempF: 40,
+    tempNormalF: 39,
+    tempTrend7dF: 0.6,
+    tempTrendLabel: "steady",
+    tempRecentF: [39, 39, 39, 39, 39, 40, 40, 40, 40, 40, 40, 40],
+    tempRecentNormalF: [39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39],
+    tempBand: "cool",
+    tempPosition: 24,
+    tempContext: "Cold upper-valley water still keeps feeding windows tight, but it is usually more active by late morning than the smaller Aspen-above gauge.",
+    tempGuidance: "Look for the best bite once the sun has had time to warm edges and softer inside lanes.",
+    clarity: "Unknown",
+    clarityBand: "clear",
+    clarityPosition: 50,
+    clarityContext: "No live turbidity signal is currently available from this gauge.",
+    turbidityFnu: 0,
+    turbidityBand: "clear",
+    turbidityPosition: 0,
+    turbidityRecentFnu: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    turbidityTrendLabel: "holding",
+    turbidityContext: "Use local eyes and camera context for upper-Fork clarity here until we add a direct water-color source.",
+    turbidityGuidance: "Treat clarity here as an observation problem, not a solved truth signal yet.",
+    liveTurbidityUnavailable: true,
+    liveTurbiditySource: "USGS 09076300 • No turbidity data",
+    access: "Good",
+    status: "good",
+    bestTime: "11 AM - 5 PM",
+    techniques: ["nymph", "wade", "dry-dropper"],
+    hatches: ["Midges", "Blue-winged olives", "Stoneflies"],
+    summary: "A stronger upper-Fork truth source below Maroon Creek near Aspen, with live flow and seasonal temperature support but no direct turbidity feed."
+  },
+  {
     river: "Fryingpan River",
     section: "Basalt Tailwater",
     score: 91,
@@ -357,6 +486,45 @@ const conditions = [
     techniques: ["nymph", "wade", "dry-dropper"],
     hatches: ["Midges", "Caddis", "BWO"],
     summary: "A solid upper-middle Roaring Fork option with classic pocket water, seam lines, and better action once the day warms."
+  },
+  {
+    river: "Roan Creek",
+    section: "De Beque Tributary Reach",
+    score: 62,
+    flowCfs: 14,
+    flowThresholds: { veryLow: 4, low: 8, primeLow: 14, primeHigh: 35, high: 70, veryHigh: 140 },
+    flowBand: "ideal",
+    flowPosition: 34,
+    flowRecentCfs: [18, 17, 17, 16, 16, 15, 15, 15, 14, 14, 14, 14],
+    flowTrendLabel: "falling",
+    flowContext: "A small lower-valley tributary gauge where modest changes matter quickly and clarity can swing fast with weather.",
+    flowGuidance: "Best treated as a tributary truth source and color check, not as broad mainstem fishing guidance.",
+    tempF: 47,
+    tempNormalF: 45,
+    tempTrend7dF: 1.4,
+    tempTrendLabel: "warming",
+    tempRecentF: [43, 43, 44, 44, 45, 45, 46, 46, 47, 47, 47, 47],
+    tempRecentNormalF: [44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 45, 45],
+    tempBand: "steady",
+    tempPosition: 54,
+    tempContext: "This tributary tends to warm faster than the bigger rivers, which makes it useful for understanding lower-valley heat and runoff timing.",
+    tempGuidance: "Use it as a lower-valley tributary temperature signal more than a direct trout recommendation.",
+    clarity: "1-2 ft",
+    clarityBand: "dirty",
+    clarityPosition: 28,
+    turbidityFnu: 63,
+    turbidityBand: "dirty",
+    turbidityPosition: 58,
+    turbidityRecentFnu: [42, 44, 47, 49, 51, 54, 56, 58, 60, 61, 63, 63],
+    turbidityTrendLabel: "muddying",
+    turbidityContext: "Roan Creek can deliver a lot of color quickly, so this station is especially useful as a sediment and tributary-influence signal.",
+    turbidityGuidance: "Read this as watershed intel for what a lower-valley tributary is contributing right now.",
+    access: "Fair",
+    status: "fair",
+    bestTime: "Noon - 4 PM",
+    techniques: ["observe", "watershed intel", "tributary check"],
+    hatches: ["Midges"],
+    summary: "A lower-valley tributary truth source near De Beque that is especially valuable for flow, temperature, and sediment context."
   }
 ];
 
@@ -417,6 +585,7 @@ const LIVE_REFRESH_INTERVAL_MS = 30 * 60 * 1000;
 const usgsParameterCodes = {
   temperature: "00010",
   flow: "00060",
+  gaugeHeight: "00065",
   turbidity: "63680"
 };
 
@@ -473,6 +642,11 @@ const specialDataSources = {
     sourceLabel: "USBR pool elevation",
     cachePath: "special-data-cache/ruedi-reservoir.json",
     fullPoolElevationFt: 7766
+  },
+  "rifle-gap-reservoir": {
+    label: "Rifle Gap Reservoir",
+    sourceLabel: "USGS lake elevation and storage",
+    cachePath: "special-data-cache/rifle-gap-reservoir.json"
   }
 };
 
@@ -484,6 +658,10 @@ const placeholderCameraByPointId = {
   "ruedi-reservoir": {
     provider: "Wikimedia Commons placeholder",
     image: "https://commons.wikimedia.org/wiki/Special:FilePath/Ruedi%20Reservoir%2C%20dam%20and%20the%20Fryingpan%20River%20corridor%20near%20Basalt%2C%20Colo..JPG"
+  },
+  "rifle-gap-reservoir": {
+    provider: "Wikimedia Commons placeholder",
+    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Rifle%20Gap%20Reservoir%20State%20Park%2C%20Colorado.jpg"
   }
 };
 
@@ -754,22 +932,39 @@ function uniqueUsgsSites() {
   return [...new Set(accessPoints.map((point) => point.usgsSite).filter(Boolean))];
 }
 
+function parseUsgsNumericValue(value) {
+  const numericValue = Number(value);
+  if (!Number.isFinite(numericValue)) {
+    return null;
+  }
+
+  if (numericValue <= -999000) {
+    return null;
+  }
+
+  return numericValue;
+}
+
+function buildSourceLabel(label, observedAtLabel) {
+  return `${label} | ${observedAtLabel}`;
+}
+
 function setMetricUnavailableForSite(site, metric) {
   const config = {
     temp: {
       flag: "liveTempUnavailable",
       source: "liveTempSource",
-      sourceText: `${usgsStationLabel(site)} • No temperature data`
+      sourceText: `${usgsStationLabel(site)} | No temperature data`
     },
     flow: {
       flag: "liveFlowUnavailable",
       source: "liveFlowSource",
-      sourceText: `${usgsStationLabel(site)} • No flow data`
+      sourceText: `${usgsStationLabel(site)} | No flow data`
     },
     turbidity: {
       flag: "liveTurbidityUnavailable",
       source: "liveTurbiditySource",
-      sourceText: `${usgsStationLabel(site)} • No turbidity data`
+      sourceText: `${usgsStationLabel(site)} | No turbidity data`
     }
   };
 
@@ -1443,7 +1638,7 @@ async function loadLiveUsgsWaterTemperature() {
 
   const temperatureSeriesF = values
     .map((entry) => ({
-      valueF: roundToTenths(celsiusToFahrenheit(Number(entry.value))),
+      valueF: roundToTenths(celsiusToFahrenheit(parseUsgsNumericValue(entry.value))),
       dateTime: entry.dateTime
     }))
     .filter((entry) => Number.isFinite(entry.valueF));
@@ -1661,7 +1856,7 @@ async function loadLiveUsgsWaterTemperature(site) {
     tempContext: buildTempContextFromBand(tempBand),
     tempGuidance: buildTempGuidanceFromBandAndTrend(tempBand, trendLabel),
     tempNormalF: baseCondition.tempNormalF,
-    liveTempSource: `${usgsStationLabel(site)} • ${formatShortObservedAt(current.dateTime)}`
+    liveTempSource: buildSourceLabel(usgsStationLabel(site), formatShortObservedAt(current.dateTime))
   }));
 }
 
@@ -1691,7 +1886,7 @@ async function loadLiveUsgsFlow(site) {
 
   const flowSeries = values
     .map((entry) => ({
-      valueCfs: Number(entry.value),
+      valueCfs: parseUsgsNumericValue(entry.value),
       dateTime: entry.dateTime
     }))
     .filter((entry) => Number.isFinite(entry.valueCfs));
@@ -1731,10 +1926,59 @@ async function loadLiveUsgsFlow(site) {
       flowPosition: flowPositionFromCfs(current.valueCfs, thresholds),
       flowContext: buildFlowContextFromBand(flowBand),
       flowGuidance: buildFlowGuidanceFromBandAndTrend(flowBand, trendLabel),
-      liveFlowSource: `${usgsStationLabel(site)} • ${formatShortObservedAt(current.dateTime)}`,
+      liveFlowSource: buildSourceLabel(usgsStationLabel(site), formatShortObservedAt(current.dateTime)),
       flowThresholds: thresholds
     };
   });
+}
+
+async function loadLiveUsgsGaugeHeight(site) {
+  const params = new URLSearchParams({
+    format: "json",
+    sites: site,
+    parameterCd: usgsParameterCodes.gaugeHeight,
+    siteStatus: "all",
+    period: "P7D"
+  });
+
+  const response = await fetch(`https://waterservices.usgs.gov/nwis/iv/?${params.toString()}`);
+  if (!response.ok) {
+    throw new Error(`USGS request failed with ${response.status}`);
+  }
+
+  const payload = await response.json();
+  const series = payload?.value?.timeSeries?.find((entry) =>
+    entry.variable?.variableCode?.some((code) => code.value === usgsParameterCodes.gaugeHeight)
+  );
+
+  const values = series?.values?.[0]?.value ?? [];
+  if (!values.length) {
+    throw new Error("USGS response did not include gauge height values");
+  }
+
+  const gaugeHeightSeries = values
+    .map((entry) => ({
+      valueFt: roundToTenths(parseUsgsNumericValue(entry.value)),
+      dateTime: entry.dateTime
+    }))
+    .filter((entry) => Number.isFinite(entry.valueFt));
+
+  if (!gaugeHeightSeries.length) {
+    throw new Error("USGS gauge height series could not be parsed");
+  }
+
+  const current = gaugeHeightSeries[gaugeHeightSeries.length - 1];
+  const recentThreeDays = gaugeHeightSeries.filter(
+    (entry) => new Date(entry.dateTime).getTime() >= new Date(current.dateTime).getTime() - 3 * 24 * 60 * 60 * 1000
+  );
+  const sampledSeries = downsampleSeries(recentThreeDays.map((entry) => entry.valueFt), 36);
+
+  setLiveOverridesForSite(site, (_baseCondition, existingOverride) => ({
+    ...existingOverride,
+    gaugeHeightFt: roundToTenths(current.valueFt),
+    gaugeHeightRecentFt: sampledSeries.map((value) => roundToTenths(value)),
+    liveGaugeHeightSource: buildSourceLabel(usgsStationLabel(site), formatShortObservedAt(current.dateTime))
+  }));
 }
 
 async function loadLiveUsgsTurbidity(site) {
@@ -1763,7 +2007,7 @@ async function loadLiveUsgsTurbidity(site) {
 
   const turbiditySeries = values
     .map((entry) => ({
-      valueFnu: roundToTenths(Number(entry.value)),
+      valueFnu: roundToTenths(parseUsgsNumericValue(entry.value)),
       dateTime: entry.dateTime
     }))
     .filter((entry) => Number.isFinite(entry.valueFnu));
@@ -1791,7 +2035,7 @@ async function loadLiveUsgsTurbidity(site) {
     turbidityContext: buildTurbidityContextFromBand(band),
     turbidityGuidance: buildTurbidityGuidanceFromBandAndTrend(band, trendLabel),
     clarityBand: baseCondition.clarityBand,
-    liveTurbiditySource: `${usgsStationLabel(site)} • ${formatShortObservedAt(current.dateTime)}`
+    liveTurbiditySource: buildSourceLabel(usgsStationLabel(site), formatShortObservedAt(current.dateTime))
   }));
 }
 
@@ -2287,6 +2531,83 @@ function flowGraphicMarkup(item) {
       </div>
       ${flowHistoryMarkup(item)}
       ${compactToggleMarkup(item.flowGuidance)}
+    </div>
+  `;
+}
+
+function gaugeHeightTrendLabelFromDelta(delta) {
+  if (delta > 0.1) {
+    return "Rising";
+  }
+  if (delta < -0.1) {
+    return "Falling";
+  }
+  return "Steady";
+}
+
+function gaugeHeightTrendDeltaLabel(delta) {
+  const absDelta = Math.abs(delta).toFixed(2);
+  if (delta > 0) {
+    return `^ ${absDelta} ft / 3d`;
+  }
+  if (delta < 0) {
+    return `v ${absDelta} ft / 3d`;
+  }
+  return `= ${absDelta} ft / 3d`;
+}
+
+function gaugeHeightHistoryMarkup(item) {
+  const actual = item.gaugeHeightRecentFt ?? Array.from({ length: 12 }, () => item.gaugeHeightFt);
+  const averageValue = roundToTenths(actual.reduce((sum, value) => sum + value, 0) / actual.length);
+  const averageLine = Array.from({ length: actual.length }, () => averageValue);
+  const allValues = actual.concat(averageLine);
+  const minValue = Math.min(...allValues) - 0.2;
+  const maxValue = Math.max(...allValues) + 0.2;
+  const width = 260;
+  const height = 92;
+  const averagePath = buildLinePath(averageLine, width, height, minValue, maxValue);
+  const actualPath = buildLinePath(actual, width, height, minValue, maxValue);
+  const dayDividers = buildTemperatureDayDividers(3, width, height);
+  const todayX = width;
+  const todayY = height - ((actual[actual.length - 1] - minValue) / (maxValue - minValue || 1)) * height;
+  const windowDelta = roundToTenths(actual[actual.length - 1] - actual[0]);
+
+  return `
+    <div class="gauge-height-history">
+      <div class="gauge-height-history__header">
+        <span class="metric-label">3 day pattern</span>
+        <strong>${gaugeHeightTrendLabelFromDelta(windowDelta)}</strong>
+      </div>
+      <svg class="gauge-height-history__chart" viewBox="0 0 ${width} ${height}" aria-label="Recent gauge height versus 3 day average">
+        ${dayDividers}
+        <path class="gauge-height-history__average" d="${averagePath}" />
+        <path class="gauge-height-history__line" d="${actualPath}" />
+        <circle class="gauge-height-history__today" cx="${todayX}" cy="${todayY.toFixed(1)}" r="4.5" />
+      </svg>
+      <div class="gauge-height-history__legend">
+        <span><i class="legend-line legend-line--flow"></i>Now</span>
+        <span><i class="legend-line legend-line--normal"></i>3d avg</span>
+        <span>${gaugeHeightTrendDeltaLabel(windowDelta)}</span>
+      </div>
+    </div>
+  `;
+}
+
+function gaugeHeightGraphicMarkup(item) {
+  if (!Number.isFinite(item.gaugeHeightFt)) {
+    return "";
+  }
+
+  return `
+    <div class="gauge-height-card">
+      <div class="gauge-height-card__header">
+        <div>
+          <p class="metric-label">Gauge Height</p>
+          <strong>${item.gaugeHeightFt.toFixed(2)} ft</strong>
+          ${item.liveGaugeHeightSource ? `<p class="gauge-height-card__source">${item.liveGaugeHeightSource}</p>` : ""}
+        </div>
+      </div>
+      ${gaugeHeightHistoryMarkup(item)}
     </div>
   `;
 }
@@ -3380,16 +3701,46 @@ function isMonitoringStation(point) {
   return point.accessType?.toLowerCase().includes("gauge") || Boolean(point.usgsSite && point.accessType?.toLowerCase().includes("usgs"));
 }
 
+function liveMetricAvailabilityForPoint(point) {
+  const condition = findConditionForAccess(point);
+  if (!condition || !isMonitoringStation(point)) {
+    return { flow: false, temp: false, turbidity: false, camera: false };
+  }
+
+  const hasCamera =
+    Boolean(point.cameraFeedId) ||
+    Boolean(placeholderCameraByPointId[point.id]) ||
+    Boolean(placeholderCameraByRiver[point.river]);
+
+  return {
+    flow: Number.isFinite(condition.flowCfs) && !condition.liveFlowUnavailable,
+    temp: Number.isFinite(condition.tempF) && !condition.liveTempUnavailable,
+    turbidity: Number.isFinite(condition.turbidityFnu) && !condition.liveTurbidityUnavailable,
+    camera: hasCamera
+  };
+}
+
 function buildMarkerIcon(point, status, isActive) {
   const monitoringStation = isMonitoringStation(point);
   const shapeClass = monitoringStation ? "map-marker--square" : "map-marker--circle";
   const activeClass = isActive ? "is-active" : "";
   const size = isActive ? 22 : 18;
   const fillColor = monitoringStation ? "#7b5fd6" : markerFillColor(status);
+  const metricAvailability = liveMetricAvailabilityForPoint(point);
+  const richnessMarkup = monitoringStation
+    ? `
+      <span class="map-marker__richness" aria-hidden="true">
+        <span class="map-marker__quadrant map-marker__quadrant--flow${metricAvailability.flow ? " is-on" : ""}"></span>
+        <span class="map-marker__quadrant map-marker__quadrant--temp${metricAvailability.temp ? " is-on" : ""}"></span>
+        <span class="map-marker__quadrant map-marker__quadrant--turbidity${metricAvailability.turbidity ? " is-on" : ""}"></span>
+        <span class="map-marker__quadrant map-marker__quadrant--camera${metricAvailability.camera ? " is-on" : ""}"></span>
+      </span>
+    `
+    : "";
 
   return L.divIcon({
     className: "map-marker-icon",
-    html: `<span class="map-marker ${shapeClass} ${activeClass}" style="--marker-fill:${fillColor}; --marker-size:${size}px;"></span>`,
+    html: `<span class="map-marker ${shapeClass} ${activeClass}" style="--marker-fill:${fillColor}; --marker-size:${size}px;">${richnessMarkup}</span>`,
     iconSize: [size + 8, size + 8],
     iconAnchor: [(size + 8) / 2, (size + 8) / 2]
   });
@@ -3507,6 +3858,7 @@ function renderMapDetail(points) {
       ].join("")
     : [
         flowGraphicMarkup(condition),
+        gaugeHeightGraphicMarkup(condition),
         temperatureGraphicMarkup(condition),
         turbidityGraphicMarkup(condition)
       ].join("");
@@ -3551,6 +3903,12 @@ async function refreshLiveData() {
     } catch (error) {
       setMetricUnavailableForSite(site, "flow");
       console.error(`Unable to load live USGS flow for station ${site}.`, error);
+    }
+
+    try {
+      await loadLiveUsgsGaugeHeight(site);
+    } catch (error) {
+      // Gauge height is optional supporting context, so missing stage data should stay silent.
     }
 
     try {

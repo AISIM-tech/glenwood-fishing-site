@@ -21,6 +21,7 @@ Then open `http://localhost:8000`.
 ## Data Files
 
 - [access-points.csv](/c:/Users/andja/Mousetrap/glenwood-fishing-site/access-points.csv): live map points, currently focused on gauges and reservoir points
+- [met-stations.csv](/c:/Users/andja/Mousetrap/glenwood-fishing-site/met-stations.csv): dedicated weather and air-temperature station list, kept separate from river truth sources
 - [flow-thresholds.csv](/c:/Users/andja/Mousetrap/glenwood-fishing-site/flow-thresholds.csv): per-gauge flow category thresholds
 - [camera-feeds.json](/c:/Users/andja/Mousetrap/glenwood-fishing-site/camera-feeds.json): buffered USGS and CoTrip camera feed definitions
 - [access-points-model.csv](/c:/Users/andja/Mousetrap/glenwood-fishing-site/access-points-model.csv): prototype modeling metadata

@@ -143,6 +143,72 @@ h1 {
   position: relative;
 }
 
+.map-locator {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  z-index: 450;
+  display: grid;
+  gap: 8px;
+  width: 164px;
+  padding: 12px;
+  border: 1px solid rgba(18, 49, 47, 0.12);
+  border-radius: 20px;
+  background: rgba(248, 250, 245, 0.82);
+  box-shadow: 0 14px 30px rgba(18, 49, 47, 0.12);
+  backdrop-filter: blur(8px);
+  pointer-events: none;
+}
+
+.map-locator__frame {
+  overflow: hidden;
+  border: 1px solid rgba(18, 49, 47, 0.12);
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 35% 25%, rgba(255, 255, 255, 0.85), rgba(236, 240, 231, 0.92)),
+    linear-gradient(180deg, rgba(213, 223, 210, 0.72), rgba(241, 245, 237, 0.92));
+}
+
+.map-locator__svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.map-locator__neighbor {
+  fill: rgba(222, 226, 214, 0.58);
+  stroke: rgba(107, 125, 115, 0.24);
+  stroke-width: 0.8;
+}
+
+.map-locator__state {
+  fill: rgba(236, 232, 212, 0.9);
+  stroke: rgba(71, 88, 79, 0.68);
+  stroke-width: 1.6;
+}
+
+.map-locator__focus {
+  fill: rgba(234, 207, 83, 0.28);
+  stroke: rgba(213, 171, 33, 0.92);
+  stroke-width: 1.6;
+}
+
+.map-locator__focus-dot {
+  fill: rgba(201, 150, 22, 0.96);
+}
+
+.map-locator__label {
+  fill: rgba(53, 73, 66, 0.78);
+  font-family: "IBM Plex Mono", monospace;
+  letter-spacing: 0.06em;
+}
+
+.map-locator__label--state {
+  font-size: 10px;
+  text-anchor: middle;
+}
+
+
 .map-canvas,
 .map-detail {
   border: 1px solid var(--line);
@@ -209,6 +275,37 @@ h1 {
 
 .map-marker--square {
   border-radius: 4px;
+}
+
+.map-marker__richness {
+  position: absolute;
+  inset: 2px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1px;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.map-marker__quadrant {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.map-marker__quadrant--flow.is-on {
+  background: #8fd0ff;
+}
+
+.map-marker__quadrant--temp.is-on {
+  background: #91efb1;
+}
+
+.map-marker__quadrant--turbidity.is-on {
+  background: #f4d37e;
+}
+
+.map-marker__quadrant--camera.is-on {
+  background: #d5a8ff;
 }
 
 .map-marker.is-active {
@@ -1269,6 +1366,10 @@ h1 {
   grid-column: 1 / -1;
 }
 
+.map-detail__metrics .gauge-height-card {
+  grid-column: 1 / -1;
+}
+
 .map-detail__metrics .temp-card {
   grid-column: 1 / -1;
 }
@@ -1574,6 +1675,102 @@ h1 {
     linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(240, 235, 226, 0.92)),
     linear-gradient(90deg, rgba(153, 118, 54, 0.06), transparent);
   border: 1px solid rgba(18, 49, 47, 0.08);
+}
+
+.gauge-height-card {
+  padding: 14px;
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(234, 240, 247, 0.9)),
+    linear-gradient(90deg, rgba(75, 126, 177, 0.05), transparent);
+  border: 1px solid rgba(18, 49, 47, 0.08);
+}
+
+.gauge-height-card__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: start;
+  margin-bottom: 12px;
+}
+
+.gauge-height-card__header strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 1.2rem;
+}
+
+.gauge-height-card__source {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.gauge-height-history {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.gauge-height-history__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.gauge-height-history__header strong {
+  font-size: 0.95rem;
+}
+
+.gauge-height-history__chart {
+  display: block;
+  width: 100%;
+  height: 92px;
+  margin-top: 10px;
+  overflow: visible;
+}
+
+.gauge-height-history__line,
+.gauge-height-history__average {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+}
+
+.gauge-height-history__line {
+  stroke: #4a7cb7;
+}
+
+.gauge-height-history__average {
+  stroke: rgba(18, 49, 47, 0.35);
+  stroke-dasharray: 5 5;
+}
+
+.gauge-height-history__today {
+  fill: #12312f;
+  stroke: rgba(255, 255, 255, 0.95);
+  stroke-width: 2;
+}
+
+.gauge-height-history__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.gauge-height-history__legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .turbidity-card__header {
@@ -2224,6 +2421,13 @@ h1 {
   .map-detail {
     width: min(620px, calc(100% - 32px));
   }
+
+  .map-locator {
+    left: 14px;
+    bottom: 14px;
+    width: 138px;
+    padding: 10px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -2254,6 +2458,17 @@ h1 {
     background: rgba(250, 252, 250, 0.52);
     backdrop-filter: blur(20px);
     box-shadow: 0 16px 30px rgba(14, 28, 25, 0.14);
+  }
+
+  .map-locator {
+    left: 10px;
+    bottom: 10px;
+    width: 118px;
+    padding: 9px;
+  }
+
+  .map-locator .panel-label {
+    font-size: 0.62rem;
   }
 
   .map-detail__topbar {

@@ -30,6 +30,17 @@
           <div class="map-layout">
             <div class="map-stage">
               <div class="map-canvas" id="map-canvas" aria-label="Prototype fishing access map"></div>
+              <aside class="map-locator" aria-label="Regional locator inset">
+                <p class="panel-label">Area of interest</p>
+                <div class="map-locator__frame">
+                  <svg class="map-locator__svg" viewBox="0 0 180 190" role="img" aria-label="Colorado locator map with the Roaring Fork valley highlighted">
+                    <path class="map-locator__state" d="M34 22 L146 22 L146 144 L124 144 L124 168 L80 168 L80 184 L34 184 Z"></path>
+                    <circle class="map-locator__focus" cx="79" cy="92" r="11"></circle>
+                    <circle class="map-locator__focus-dot" cx="79" cy="92" r="3.5"></circle>
+                    <text class="map-locator__label map-locator__label--state" x="90" y="16">Colorado</text>
+                  </svg>
+                </div>
+              </aside>
               <aside class="map-detail" id="map-detail">
                 <div class="map-detail__topbar">
                   <div>
